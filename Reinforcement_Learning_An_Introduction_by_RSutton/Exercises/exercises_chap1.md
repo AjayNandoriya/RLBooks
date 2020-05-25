@@ -1,17 +1,4 @@
 <html>
-
-<head>
-    <style>
-        li{
-    margin-top: 20px;
-}
-
-li:first-child {
-    margin-top:0;
-}
-        </style>
-</head>
-
 <body>
     <h1>
         <a href="http://incompleteideas.net/book/the-book.html">Reinforcement Learning: An Introduction</a>
