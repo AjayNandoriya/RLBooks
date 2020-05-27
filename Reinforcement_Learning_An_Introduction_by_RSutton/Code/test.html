@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello OpenCV.js</title>
+<script src="https://docs.opencv.org/3.4.0/opencv.js" type="text/javascript"></script>
+<script>
+function onOpenCvReady() {
+    document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+  }
+
+let loadMYImage = async (src) =>{
+    promise = new Promise((resolve, reject) => {
+  const img = new Image();
+  img.onload = () => resolve(img);
+  img.onerror = (e) => reject(e);
+  img.src = "file:///D:/individualImage.png";
+  img.crossOrigin = "anonymous";
+//   img.setAttribute('crossOrigin', 'localhost');
+
+  console.log(img);
+});
+  return promise;
+};
+
+async function reloadImage(){
+    img = await loadMYImage("");
+    let imgElement = document.getElementById('imageSrc');
+    imgElement.src = img.src;
+    imgElement.crossOrigin = "anonymous";
+    console.log(img.crossOrigin);
+    let c = document.getElementById("canvasInput");
+    c.getContext('2d').drawImage(img, 0, 0, 512, 512);
+
+    let mat = cv.imread("canvasInput");
+
+    cv.imshow('canvasOutput', mat);
+    mat.delete();
+}
+</script>
+</head>
+<body>
+<h2>Hello OpenCV.js</h2>
+<p id="status">OpenCV.js is in header.</p>
+<div>
+    <button id="button1" onclick="reloadImage();">Reload</button>
+  <div class="inputoutput">
+    <img id="imageSrc" alt="No Image" />
+    <div class="caption">imageSrc <input type="file" id="fileInput" name="file" /></div>
+
+  </div>
+  <div class="inputoutput">
+    <canvas id="canvasOutput" ></canvas>
+    <canvas id="canvasInput" ></canvas>
+    <div class="caption">canvasOutput</div>
+  </div>
+</div>
+
+</body>
+</html>
