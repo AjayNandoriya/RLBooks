@@ -28,7 +28,7 @@
 
     Answer 3.7
 
-3.8 **Suppose $\gamma$ = 0.5 and the following sequence of rewards is received R<sub>1</sub> = -1, R<sub>2</sub> = 2, R<sub>3</sub> = 6, R<sub>4</sub> = 3, and R<sub>5</sub> = 2, with T = 5. What are G<sub>0</sub>, G<sub>1</sub>, . . ., G<sub>5</sub>? Hint: Work backwards.**
+3.8 **Suppose \gamma = 0.5 and the following sequence of rewards is received R<sub>1</sub> = -1, R<sub>2</sub> = 2, R<sub>3</sub> = 6, R<sub>4</sub> = 3, and R<sub>5</sub> = 2, with T = 5. What are G<sub>0</sub>, G<sub>1</sub>, . . ., G<sub>5</sub>? Hint: Work backwards.**
 
     Answer 3.8
 
