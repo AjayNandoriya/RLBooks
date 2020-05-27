@@ -1,4 +1,4 @@
-# [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html)
+# [Reinforcement Learning: An Introduction](../../README.md)
 
 By [Richard S. Sutton](http://incompleteideas.net/index.html) and [Andrew G. Barto](https://people.cs.umass.edu/~barto/)
 
