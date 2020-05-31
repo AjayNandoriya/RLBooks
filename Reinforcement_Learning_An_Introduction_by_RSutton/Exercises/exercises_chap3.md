@@ -66,11 +66,33 @@
 
 3.12 **Give an equation for v<sub>$\pi$</sub> in terms of q<sub>$\pi$</sub> and $\pi$.**
 
-    Answer 3.12
+    function V_pi(s){
+        // v_pi = sum of (Q_pi(s,a) * pi(a/s)) over all actions.
+
+        float v_pi = 0;
+        for(a in A){
+            v_pi += Q_pi(s,a) * PI(a,s) 
+        }
+        return v_pi;
+    }
 
 3.13 **Give an equation for q<sub>$\pi$</sub> in terms of v<sub>$\pi$</sub> and the four-argument p.**
 
-    Answer 3.13
+    function Q_pi(s,a){
+        // q_pi = 
+        float q_pi = 0:
+        for(s' in S){
+            float R_t = 0
+            float p_s' = 0
+            for(r in R){
+                R_t += Reward(s',r,s,a)*p(s',r,s,a);  
+                p_s' += p(s',r,s,a);
+            }
+
+            q_pi = (gamma*V_pi(s') + R_t)*p_s';
+        }
+        return q_pi;
+    }
 
 3.14 **The Bellman equation (3.14) must hold for each state for the value function v<sub>$\pi$</sub> shown in Figure 3.2 (right) of Example 3.5. Show numerically that this equation holds for the center state, valued at +0.7, with respect to its four neighboring states, valued at +2.3, +0.4, -0.4, and +0.7. (These numbers are accurate only to one decimal place.)**
 
