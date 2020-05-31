@@ -33,7 +33,7 @@
 |low|recharge|high|R_0|1|
 ----
 
-    basically, p(s',r/s,a) = p(s'/s,a) because there is only 1 type of reward possible for given (s,a,s') pair.
+    basically, p(s',r/s,a) = (r == R(s,a,s'))?p(s'/s,a):0. because there is only 1 type of reward possible for given (s,a,s') pair.
 
 
 3.5 **The equations in Section 3.1 are for the continuing case and need to be modified (very slightly) to apply to episodic tasks. Show that you know the modifications needed by giving the modified version of (3.3).**
