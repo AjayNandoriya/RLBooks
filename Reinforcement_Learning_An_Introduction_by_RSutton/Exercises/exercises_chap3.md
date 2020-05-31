@@ -79,7 +79,7 @@
 3.13 **Give an equation for q<sub>$\pi$</sub> in terms of v<sub>$\pi$</sub> and the four-argument p.**
 
     function Q_pi(s,a){
-        // q_pi = 
+        // q_pi = sum(current reward based on action(Rt(s,a)) + discounted future rewards based on future state Vt+1(s'))
         float q_pi = 0:
         for(s' in S){
             float R_t = 0
