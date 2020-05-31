@@ -14,7 +14,27 @@
 
 3.4 **Give a table analogous to that in Example 3.3, but for p(s', r|s, a). It should have columns for s, a, s', r, and p(s', r|s, a), and a row for every 4-tuple for which p(s', r|s, a) > 0.**
 
-    Answer 3.4
+    R = {R_search, R_wait, R_recharge, R_rescue:-3, R_0:0S}
+
+|s|a|s'|r|p(s',r/s,a)|
+|-|-|-|-|-|
+|high|search|high|R_search|alpha*1|
+|high|search|high|R_wait|0|
+|high|search|high|R_recharge|0|
+|high|search|high|R_rescue|0|
+|high|search|high|R_0|0|
+|-|-|-|-|-|
+|high|search|high|R_search|alpha*1|
+|high|search|low|R_search|(1-alpha)*1|
+|low|search|high|R_rescue|(1-beta)*1|
+|low|search|low|R_search|beta*1|
+|high|wait|high|R_wait|1|
+|low|wait|low|R_wait|1|
+|low|recharge|high|R_0|1|
+----
+
+    basically, p(s',r/s,a) = p(s'/s,a) because there is only 1 type of reward possible for given (s,a,s') pair.
+
 
 3.5 **The equations in Section 3.1 are for the continuing case and need to be modified (very slightly) to apply to episodic tasks. Show that you know the modifications needed by giving the modified version of (3.3).**
 
